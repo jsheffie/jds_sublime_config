@@ -1,0 +1,14 @@
+#!/bin/bash
+my_magic_number=300
+for fname in `find . -name "*.js"`; do
+   #echo $fname
+   # Test the file to see if the last line is longer than... bla..
+   character_count=$(tail -1 $fname |wc -m)
+   #echo "$character_count"
+   if [ $character_count -gt $my_magic_number ]; then
+      #echo " --> compressed: $fname"   	
+      :
+  else
+  	   grep --with-filename $1 $fname
+   fi
+done

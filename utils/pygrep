@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# todo: deal with grep -i 
+#       sometimes that exactly what I want.
+echo "find . -name '*.py' |xargs grep $1"
+find . -name "*.py" |xargs grep $1
